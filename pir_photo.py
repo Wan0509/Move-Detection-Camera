@@ -63,7 +63,7 @@ try:
       emailText = "Es wurde eine Bewegung erkannt"
       msg.attach(MIMEText(emailText, "html"))
     
-      server = smtplib.SMTP("smtp.strato.de")
+      server = smtplib.SMTP("smtp.provider.de")
       server.starttls()
       server.login(senderEmail, "")
       text = msg.as_string()

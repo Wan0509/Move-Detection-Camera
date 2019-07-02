@@ -53,8 +53,8 @@ try:
       cam.close()
       State = 1
       #Email versenden zur Benachrichtigung
-      senderEmail = "ben@hintertuer.net"
-      empfangsEmail = "ben@hintertuer.net"
+      senderEmail = "t"
+      empfangsEmail = ""
       msg = MIMEMultipart()
       msg["From"] = senderEmail
       msg["To"] = empfangsEmail
@@ -65,7 +65,7 @@ try:
     
       server = smtplib.SMTP("smtp.strato.de")
       server.starttls()
-      server.login(senderEmail, "#05BenjamiN09#")
+      server.login(senderEmail, "")
       text = msg.as_string()
       server.sendmail(senderEmail, empfangsEmail, text)
       server.quit()
